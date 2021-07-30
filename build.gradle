@@ -1,0 +1,24 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.3'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'cc.kamma'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation group: 'io.netty', name: 'netty-all', version: '4.1.66.Final'
+    implementation 'io.netty.incubator:netty-incubator-transport-native-io_uring:0.0.5.Final:linux-x86_64'
+
+}
+
+test {
+    useJUnitPlatform()
+}
